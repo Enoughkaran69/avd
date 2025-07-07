@@ -16,7 +16,8 @@ app = Flask(__name__)
 app.config['SECRET_KEY'] = 'your-secret-key-here-change-this'
 
 # Create downloads directory if it doesn't exist
-DOWNLOAD_DIR = os.path.join(os.getcwd(), 'downloads')
+DOWNLOAD_DIR = "/tmp/downloads"
+
 if not os.path.exists(DOWNLOAD_DIR):
     os.makedirs(DOWNLOAD_DIR)
 
